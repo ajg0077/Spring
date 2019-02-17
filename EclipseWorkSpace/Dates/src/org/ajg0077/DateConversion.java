@@ -46,6 +46,7 @@ public class DateConversion {
 		System.out.println(stringToDate("2018/10/10", "yyyy/MM/dd"));
 		System.out.println(stringToDateFormatted("2018/10/10", "yyyy/MM/dd", "dd/MM/yyyy"));
 		System.out.println(stringToSqlDate("2019/02/01", "yyyy/MM/dd").toString());
+		System.out.println();
 	}
 
 }
