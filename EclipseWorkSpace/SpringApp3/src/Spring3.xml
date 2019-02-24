@@ -4,11 +4,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="address3" class="employee11_InnerBean.Address">
+	<!-- Alias name can be used to refer this bean insead of with the id -->
+	<bean id="address3" class="employee11_InnerBean.Address" name="anotherAliasExample">
 		<property name="city" value="Adress 3"></property>
 		<property name="hNo" value="333"></property>
 	</bean>
-
+	
+	
 	<bean id="manager" class="employee11_InnerBean.Manager">
 		<property name="addressa">
 			<bean class="employee11_InnerBean.Address">
@@ -22,7 +24,9 @@
 				<property name="hNo" value="222"></property>
 			</bean>
 		</property>
-		<property name="addressc" ref="address3"></property>
+		<property name="addressc" ref="anotherAliasExample"></property>
 	</bean>
-
+	
+	<!-- Giving alias name to manager id in a different way -->
+	<alias name="manager" alias="aliasName"/>
 </beans>

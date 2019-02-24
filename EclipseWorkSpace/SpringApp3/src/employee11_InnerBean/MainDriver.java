@@ -7,7 +7,8 @@ public class MainDriver {
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring3.xml");
-		Manager manager = context.getBean("manager", Manager.class);
+		/*Calling by aliasname for manager bean*/
+		Manager manager = context.getBean("aliasName", Manager.class);
 		manager.address();
 		
 	}
