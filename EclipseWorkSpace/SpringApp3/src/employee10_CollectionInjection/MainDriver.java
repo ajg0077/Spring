@@ -10,7 +10,5 @@ public class MainDriver {
 		Manager manager = context.getBean("manager", Manager.class);
 		manager.address();
 		
-		Director director = context.getBean("director", Director.class);
-		director.address();
 	}
 }
