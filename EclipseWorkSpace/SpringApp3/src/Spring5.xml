@@ -17,13 +17,10 @@
 		<property name="hNo" value="333"></property>
 	</bean>
 
-	<bean id="managerParent"
-		class="employee13_Initialize_DisposibleBean.Manager">
-		<property name="addressa" ref="address1"></property>
-	</bean>
 
 	<bean id="manager" class="employee13_Initialize_DisposibleBean.Manager"
-		parent="managerParent" name="aliasName">
+		 name="aliasName">
+		<property name="addressa" ref="address1"></property>
 		<property name="addressb" ref="address2"></property>
 		<property name="addressc" ref="address3"></property>
 	</bean>
