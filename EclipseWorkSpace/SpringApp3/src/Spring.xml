@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="address" class="employee10_CollectionInjection.Address">
+		<property name="city" value="Bean City"></property>
+		<property name="hNo" value="123"></property>
+	</bean>
+
+	<bean id="manager" class="employee10_CollectionInjection.Manager">
+		<property name="address" ref="address"></property>
+	</bean>
+	<bean id="director" class="employee10_CollectionInjection.Director">
+		<property name="city" value="New City"></property>
+	</bean> 
+	
+</beans>
