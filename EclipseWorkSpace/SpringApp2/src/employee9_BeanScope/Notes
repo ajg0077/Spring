@@ -1,0 +1,17 @@
+Spring XML used - Spring4.xml
+
+BeanScopes
+
+1) Singleton :
+	Only once per spring container, 
+	by default all beans are singleton
+2) Prototype : 
+	newly created for get request
+
+Only while using XmlWebApplicationContext below mentioned
+	3) Request : 
+		new bean created per servlet 
+	4) Session : 
+		new bean created per session
+	5) Global Session : 
+		new bean per global http session

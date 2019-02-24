@@ -1,0 +1,47 @@
+AplicatinoContextAware:
+	can pass the context from the driver class inside the invoked class
+	
+BeanNameAware
+	Can be used to get the name of the bean which is used to get the class.
+
+Spring3.xml used here
+<bean id="directorA" class="employee8_springAwareFeatures.Director">
+		<property name="city" value="New City"></property>
+	</bean> 
+
+class file
+public class Director implements EmployeeAddress, ApplicationContextAware, BeanNameAware {
+
+	private String city;
+	private ApplicationContext context=null;
+	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	@Override
+	public void address() {
+		System.out.println("Address " + getCity());
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		this.context =context;
+		Manager manager = context.getBean("manager", Manager.class);
+		System.out.println("Context inside Director class");
+		manager.address();
+	}
+
+	@Override
+	public void setBeanName(String bean) {
+		System.out.println("Name of Bean"+ bean);
+	}
+
+}
+
+
+ 
