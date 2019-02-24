@@ -19,7 +19,7 @@
 
 
 	<bean id="manager" class="employee13_Initialize_DisposibleBean.Manager"
-		 name="aliasName">
+		 name="aliasName" init-method="init" destroy-method="destroy">
 		<property name="addressa" ref="address1"></property>
 		<property name="addressb" ref="address2"></property>
 		<property name="addressc" ref="address3"></property>
