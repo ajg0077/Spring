@@ -18,9 +18,13 @@
 	</bean>
 
 	<bean id="manager" class="employee10_CollectionInjection2.Manager">
-		<property name="addressa" ref="address1"></property>
-		<property name="addressb" ref="address2"></property>
-		<property name="addressc" ref="address3"></property>
+		<property name="address">
+			<list>
+				<ref bean="address1"/>
+				<ref bean="address2"/>
+				<ref bean="address3"/>
+			</list>
+		</property>
 	</bean>
 	
 </beans>
