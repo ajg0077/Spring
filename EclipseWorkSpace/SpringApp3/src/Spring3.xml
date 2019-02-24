@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="address1" class="employee11_InnerBean.Address">
+		<property name="city" value="Adress 1"></property>
+		<property name="hNo" value="111"></property>
+	</bean>
+	<bean id="address2" class="employee11_InnerBean.Address">
+		<property name="city" value="Adress 2"></property>
+		<property name="hNo" value="222"></property>
+	</bean>
+	<bean id="address3" class="employee11_InnerBean.Address">
+		<property name="city" value="Adress 3"></property>
+		<property name="hNo" value="333"></property>
+	</bean>
+
+	<bean id="manager" class="employee11_InnerBean.Manager">
+		<property name="addressa" ref="address1"></property>
+		<property name="addressb" ref="address2"></property>
+		<property name="addressc" ref="address3"></property>
+	</bean>
+	
+</beans>
