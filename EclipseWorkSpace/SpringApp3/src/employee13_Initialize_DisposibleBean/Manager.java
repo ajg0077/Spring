@@ -1,6 +1,9 @@
 package employee13_Initialize_DisposibleBean;
 
-public class Manager implements EmployeeAddress {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Manager implements EmployeeAddress, InitializingBean, DisposableBean {
 
 	private Address addressa;
 	private Address addressb;
@@ -35,6 +38,16 @@ public class Manager implements EmployeeAddress {
 		System.out.println("Address A =" + getAddressa().getCity() + " " + getAddressa().gethNo());
 		System.out.println("Address B =" + getAddressb().getCity() + " " + getAddressb().gethNo());
 		System.out.println("Address C =" + getAddressc().getCity() + " " + getAddressc().gethNo());
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Bean Destryoing");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Initializing Bean");
 	}
 
 }

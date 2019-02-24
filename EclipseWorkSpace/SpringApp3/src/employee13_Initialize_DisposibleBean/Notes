@@ -1,0 +1,5 @@
+Initialization shows twice because a parent bean is also defined with same class
+and when called it goes through parent bean and also the child bean.
+
+If parent bean is removed and only one bean is made with Manager class 
+afterPropertiesSet() will be invoked once.
