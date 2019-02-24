@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- 
+	
+		THIS
+		HAS
+		ERRORS
+		constructor arguments are not taken since the java version used is 8.0
+		
+	
+	
+	 -->
+	<bean id="address"
+		class="employee7_springconstructorInjection.Address">
+		<property name="city" value="Bean City"></property>
+		<property name="hNo" value="123"></property>
+	</bean>
+
+	<bean id="manager"
+		class="employee7_springconstructorInjection.Manager">
+		<property name="address" ref="address"></property>
+	</bean>
+	<bean id="directora"
+		class="employee7_springconstructorInjection.Director">
+		<constructor-arg type="String" value="Constructor"></constructor-arg>
+	</bean>
+</beans>
+
