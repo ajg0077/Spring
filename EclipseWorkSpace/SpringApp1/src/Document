@@ -1,0 +1,5 @@
+packages 1, 2 3 does not require spring jars
+
+package 4 :
+	Spring 3.2.0 release jars,
+	Appache commons logging jar (from java2s.com)
