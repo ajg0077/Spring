@@ -3,9 +3,14 @@ package employee7_springconstructorInjection;
 public class Director implements EmployeeAddress {
 
 	private String city;
+	private int hNo;
+	
+	public Director(String city, int hNo) {
+		this.hNo=hNo;
+		this.city = city;
+	}
 	
 	public Director(String city) {
-		super();
 		this.city = city;
 	}
 
