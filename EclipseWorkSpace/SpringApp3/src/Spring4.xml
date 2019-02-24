@@ -17,10 +17,15 @@
 		<property name="hNo" value="333"></property>
 	</bean>
 
-	<bean id="manager" class="employee12_BeanInheritance.Manager">
+	<bean id="managerParent"
+		class="employee12_BeanInheritance.Manager">
 		<property name="addressa" ref="address1"></property>
+	</bean>
+
+	<bean id="manager" class="employee12_BeanInheritance.Manager"
+		parent="managerParent">
 		<property name="addressb" ref="address2"></property>
 		<property name="addressc" ref="address3"></property>
 	</bean>
-	
+
 </beans>
